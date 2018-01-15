@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Your Wedding Your Way</title>
+<meta charset="utf-8">
+<link rel="icon" href="img/favicon.ico">
+<link rel="shortcut icon" href="img/favicon.ico">
+<link rel="stylesheet" href="cssnew/style.css">
+<link rel="stylesheet" href="cssnew/slider.css">
+<script src="jsnew/jquery.js"></script>
+<script src="jsnew/jquery-migrate-1.1.1.js"></script>
+<script src="jsnew/superfish.js"></script>
+<script src="jsnew/jquery.equalheights.js"></script>
+<script src="jsnew/jquery.easing.1.3.js"></script>
+<script src="jsnew/tms-0.4.1.js"></script>
+<script>
+$(window).load(function () {
+    $('.slider')._TMS({
+        show: 0,
+        pauseOnHover: false,
+        prevBu: '.prev',
+        nextBu: '.next',
+        playBu: false,
+        duration: 800,
+        preset: 'fade',
+        pagination: true, //'.pagination',true,'<ul></ul>'
+        pagNums: false,
+        slideshow: 8000,
+        numStatus: false,
+        banners: false,
+        waitBannerAnimation: false,
+        progressBar: false
+    })
+});
+</script>
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<link rel="stylesheet" media="screen" href="cssnew/ie.css">
+<![endif]-->
+</head>
+<body  class="page1">
+<header>
+  <div class="container_12">
+    <div class="grid_12">
+      <h1><a href="index.html"><img src="img/images1.png" alt=""></a></h1>
+      <div class="menu_block">
+        <nav>
+          <ul class="sf-menu">
+            <li class="current"><a href="index.html">Home</a></li>
+            <li class="with_ul"><a href="#">Tradition</a>
+              <ul>
+                <li><a href="TraditionServlet?param=1">Maharashtrian</a></li>
+                <li><a href="TraditionServlet?param=5">South Indian</a></li>
+ 		<li><a href="TraditionServlet?param=2">Punjabi</a></li>
+ 		<li><a href="TraditionServlet?param=3">Christian</a></li>
+	        <li><a href="TraditionServlet?param=4">Muslim</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Vendor</a>
+	     <ul>
+		<li><a href="Controller?param=deco">Theme Decoration</a></li>
+					<li><a href="JewelleryController">Jewellery</a></li>
+					<li><a href="CatererController">Caterer</a></li>
+					<li><a href="MusicController">Musicians</a></li>					
+					<li><a href="BeauticianController">Beautician</a></li>
+					<li><a href="InvitationController">Cards</a></li>
+					<li><a href="ControllerPhoto">Photographer</a></li>					
+					<li><a href="ClothingController">Clothing</a></li>
+              </ul>
+	    </li>
+            <li><a href="VenueController">Venue</a></li>
+            <li><a href="Controller?param=login">Login/Signup</a></li>
+            <li><a href="ShoppingCart.jsp"><img alt="" src="img/cart1.png" height="50px" width="50px"></a>
+          </li></ul>
+        </nav>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</header>
+<div class="top_block">
+  <div class="slider-relative">
+    <div class="slider-block">
+      <div class="slider">
+        <ul class="items">
+          <li><img src="img/slide1.jpg" alt=""></li>
+          <li><img src="img/frontpageimage.jpg" alt=""></li>
+          <li><img src="img/fpi2.jpg" alt=""></li>
+         
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="content page1">
+  <div class="container_12">
+    
+    <div class="grid_12">
+      <div class="banners">
+        <div class="maxheight">
+          <h2>Deals</h2>
+          <p><a href="Offer1.html">
+          <img src="img/offer1.jpg"></a></p>
+        </div>
+        <div class="D">
+          <h2>Deals</h2>
+          <p><a href="Offer2.html"> <img src="img/offer2.jpg"></p>
+        </div>
+        <div class="maxheight">
+          <h2>Deals</h2>
+          <p><a href="Offer3.html"> <img src="img/offer3.jpg"></p>
+        </div>
+      </div>
+    </div>
+    
+<footer>
+  <div class="container_12">
+    <div class="grid_12">
+     
+    <div class="clear"></div>
+  </div>
+</footer>
+</body>
+</html>

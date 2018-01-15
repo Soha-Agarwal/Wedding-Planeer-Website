@@ -1,0 +1,139 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+     <%@ include file="header.jsp" %>
+    
+<html>
+<head>
+    <title>Musician</title>
+        <link rel="shortcut icon" href="favicon.ico">
+	<!-- Google Fonts -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/one-page-wonder.css" rel="stylesheet">
+	
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="cssnew/slider.css"/>
+<link rel="stylesheet" type="text/css" href="cssnew/style.css"/>
+
+
+	<!-- Modernizr JS -->
+	<script src="cssd/modernizr-2.6.2.min.js"></script>
+<body>
+    
+    
+  
+	
+           
+            
+            <!--  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">The Knot</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Vendor</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Login/Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+            -->
+            <header>
+  <div class="container_12">
+    <div class="grid_12">
+      <h1><a href="index.html"><img src="img/images1.png" alt=""></a></h1>
+      <div class="menu_block">
+        <nav>
+          <ul class="sf-menu">
+            <li class="current"><a href="index.html">Home</a></li>
+           
+            <li><a href="Controller?param=login">Login/Signup</a></li>
+                        <li><a href="ShoppingCart.jsp"><img alt="" src="img/cart1.png" height="50px" width="50px"></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  		<h1>Musician</h1>	
+  
+</header>
+            
+  <section>
+      <div class="container">
+        <div class="row align-items-center">
+                   <c:forEach var="music" items="${music}">
+        
+          <div class="col-md-6 order-2">
+           <!--   <div class="p-5">
+              <img class="img-fluid rounded-circle" src="${music.img}" alt="">
+            </div>-->
+          </div>
+          <div class="p-5">
+              <h4 class="display-4"><c:out value="${music.name}" /></h4>
+              <p><c:out value="${music.type}"></c:out></p>
+				<p>Contact: &nbsp<c:out value="${music.phone}"></c:out></p>
+				<p>Price:&nbsp<c:out value="${music.price}"></c:out>
+				<div>
+				 <img class="img-fluid rounded-circle" src="${music.img}" alt="">
+				</div>
+				<form action="CartController11" method="post">
+				<input type="hidden" name="description" value="${music.name}">
+				
+				<input type="text" size="2" value="1" name="quantity">
+				<input type="hidden" name="action" value="add">
+				<input type="hidden" name="price" value="${music.price}">
+				<input type="hidden" name="category" value="Music">
+								<input type="hidden" name="email" value="${sessionScope.email}">
+				
+				<input type="submit" name="addtocart" value="Add to Cart"> </form>
+	            </div>
+          
+                
+           
+         <!--  <div class="col-md-6 order-1">
+            <div class="p-5">--> 
+            
+               </c:forEach>
+            </div>
+          </div>
+        <!-- </div>
+      </div> -->
+    </section>
+
+    
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+ 
+        
+
+</body>
+</html>
